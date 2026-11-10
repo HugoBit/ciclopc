@@ -492,7 +492,6 @@ html{scrollbar-color:rgba(255,255,255,.18) transparent;scrollbar-width:thin}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".7"/></symbol>
   <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
@@ -823,7 +822,6 @@ html{scrollbar-color:rgba(255,255,255,.18) transparent;scrollbar-width:thin}
       <p class="lead">Rellena el formulario y te contestamos por WhatsApp para acordar el día y la hora de la visita.</p>
       <div class="direct">
         <a href="#" data-wa target="_blank" rel="noopener"><svg class="ico" style="color:var(--wa)"><use href="#i-chat"/></svg><span>WhatsApp<small>La forma más rápida</small></span><svg class="ico go"><use href="#i-arrow"/></svg></a>
-        <a href="#" data-tel><svg class="ico green"><use href="#i-phone"/></svg><span>Teléfono<small>Lunes a viernes, en horario de asistencia</small></span><svg class="ico go"><use href="#i-arrow"/></svg></a>
         <a href="https://www.instagram.com/ciclopc_official/" data-ig target="_blank" rel="noopener"><svg class="ico ico-ig"><use href="#i-ig"/></svg><span>Instagram<small>Síguenos y escríbenos por mensaje</small></span><svg class="ico go"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -909,7 +907,6 @@ html{scrollbar-color:rgba(255,255,255,.18) transparent;scrollbar-width:thin}
   'use strict';
   /* ==== DATOS DE CONTACTO: cambia aquí el número real (formato internacional sin + ni espacios) ==== */
   var WHATSAPP = '34611223344';
-  var TELEFONO = '+34611223344';
   var INSTAGRAM = 'https://www.instagram.com/ciclopc_official/';
 
   var html = document.documentElement, body = document.body;
@@ -920,7 +917,6 @@ html{scrollbar-color:rgba(255,255,255,.18) transparent;scrollbar-width:thin}
   var waBase = 'https://wa.me/' + WHATSAPP;
   var waHello = waBase + '?text=' + encodeURIComponent('¡Hola CicloPC! Me gustaría pedir un técnico a domicilio.');
   document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = waHello; });
-  document.querySelectorAll('[data-tel]').forEach(function(a){ a.href = 'tel:' + TELEFONO; });
   document.querySelectorAll('[data-ig]').forEach(function(a){ a.href = INSTAGRAM; });
 
   /* Cabecera */
